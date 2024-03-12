@@ -1,0 +1,121 @@
+/*font poppins css*/
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/*-----------------header-------------------------------------------*/
+.header1{
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #d7cc75;
+    padding: 2px;
+    /*border-style: outset;*/
+}
+
+/*-----------------2 colunas >> logo e título----------------------- */
+.column1{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+}
+
+/*-----------------barra horizontal de menu--------------------------*/
+nav{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  display: flex;
+  background-color: #d7cc75;
+  padding: 1px;
+  border-radius: 7px;
+  justify-content: center;
+}
+
+nav ul{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+  /*estilizar a lista ordenada*/
+nav li{
+  display: inline-flex;    /*lista alinhada na horizontal*/
+  padding: 0.1rem;
+  margin: 3px;
+}
+
+  /*estilizar os links da lista*/
+nav li a{
+  color:black;            /*cor das letras*/
+  text-decoration: none;    /*retira o sublinhado do link*/
+  padding: 0.65rem;         /*espaçamento entre os itens*/
+  display: inline-block;    /*aumenta verticalmente a barra*/
+}
+
+  /*animação quando estiver com o mouse em cima*/
+nav li a:hover{
+  background-color: #808080;    /*altera a cor*/
+  transition: .6s;                /*transição de cor, mais suave*/
+}
+
+.submenu{
+  position: absolute;               /*itens abaixo, na horizontal*/
+  display: none;                    /*oculta o submenu*/
+  box-shadow: 0 0 0.4rem #000000;   /*cria borda no submenu*/
+  background-color: #c0c0c0;
+  width: 12rem;
+}
+
+  /*cria estrutura de bloco na vertical*/
+.submenu a{
+  display: block;
+}
+
+  /*aparecer o submenu*/
+.dropdown:hover .submenu{
+  display: block;
+  top: 155px;                     /*posição para aparecer*/
+}
+
+  /*-----------------efeito typing - cabeçalho da página--------------------*/
+h1{
+  width: 650px;
+  letter-spacing: 10px;           /*espaçamento entre letras*/
+  
+  animation: typing 3s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }  
+}
+
+@keyframes blink {
+  50%{
+    border-color: transparent;
+  }
+}
+  
+/*---------------estilo para o formulaŕio----------------*/
+.header1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    padding-top: 0px;
+}
+
+form{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: #b0c4de;
+  padding: 0.5px;
+  border-radius: 7px;
+}

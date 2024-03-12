@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header class="header1">
+    <div class="column1">
+      <div>
+        <img src="{% static 'img/logo_iefa.png' %}" alt="Instituição Educacional Francisco de Assis">
+      </div>
+      <div>
+        <h1>{% block content %}{% endblock %}</h1>
+      </div>
+    </div>
+  </header>
+  <nav>                                     <!--menu de navegação-->
+    <ul>
+      <li>
+        <a href="{% url 'task-home' %}">Início</a>
+      </li>                                    <!--lista ñ ordenada-->
+      <li class="dropdown">                 <!--lista ordenda-->
+        <a href="">Inscrições &#9660</a>    <!--criar dropdown-->
+          <div class="submenu">             <!--submenu dropdown-->
+            <a href="{% url 'insc-cadastro' %}">cadastro</a>         <!--1°opção do submenu-->
+            <a href="">visualizar</a>       <!--2°opção do submenu-->
+          </div>
+      </li>
+      <li class="dropdown">                 
+        <a href="">Matriculados &#9660</a>   
+          <div class="submenu">
+            <a href="">cadastro</a>
+            <a href="">visualizar</a>
+          </div>
+      </li>
+      <li class="dropdown">                 
+        <a href="">Professores &#9660</a>   
+          <div class="submenu">
+            <a href="">cadastro</a>
+            <a href="">visualizar</a>
+          </div>
+      </li>
+      <li class="dropdown">                 
+        <a href="">Cursos &#9660</a>   
+          <div class="submenu">
+            <a href="">cadastro</a>
+            <a href="">visualizar</a>
+          </div>
+        </li>
+      <li class="dropdown">                 
+        <a href="">Turmas &#9660</a>   
+          <div class="submenu">
+            <a href="">cadastro</a>
+            <a href="">visualizar</a>
+          </div>
+      </li>
+    </ul>
+  </nav>
+    {% block content1 %}
+    {% endblock %}
+    <div vw class="enabled"> <!--integração da api vlibras, linha 16 a 25-->
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

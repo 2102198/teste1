@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title %}Inscrições{% endblock %}
+
+{% block content %}CADASTRO DE INSCRIÇÕES{% endblock %}
+{% block content1 %}
+<form action="" autocomplete="off" method="post"> <!--conteiner do formulário-->
+    <div class="header2">
+        <h4>Dados Pessoais</h4>
+    </div>
+    <div class="div1">
+        <label for="idnome">Nome completo</label>
+        <input type="text" id="idnome" autofocus placeholder="Informe o nome completo" size="40" maxlength="50"
+            required>
+        <label for="idnomesocial">Nome social</label>
+        <input type="text" id="idnomesocial" placeholder="Informe o nome social" maxlength="20">
+    </div>
+    <div class="div1">
+        <label for="irg">RG</label>
+        <input type="text" id="irg" placeholder="Informe o RG" size="12" maxlength="12">
+        <label for="icpf">CPF</label>
+        <input type="text" id="icpf" placeholder="Informe o CPF" size="14" maxlength="14">
+        <label for="iestadocivil">Estado Civil</label>
+        <input type="text" id="iestadocivil" placeholder="Informe o estado civil" size="20" maxlength="20">
+        <label for="">Data de Nascimento</label>
+        <input type="date" id="" placeholder="Data" required>
+    </div>
+    <div class="div1">
+        <label for="inacionalidade">Nacionalidade</label>
+        <input type="text" id="inacionalidade" placeholder="Informe a nacionalidade" size="20" maxlength="20">
+        <label for="inaturalidade">Naturalidade</label>
+        <input type="text" id="inaturalidade" placeholder="Informe a naturalidade" size="20" maxlength="20">
+        <label for="iuf">UF</label>
+        <input type="text" id="iuf" size="2" maxlength="2">
+    </div>
+    <div class="div1">
+        <label for="imae">Nome completo da Mãe</label>
+        <input type="text" id="imae" placeholder="Informe o nome completo da Mãe" size="40" maxlength="45">
+        <label for="ipai">Nome completo do Pai</label>
+        <input type="text" id="ipai" placeholder="Informe o nome completo do Pai" size="40" maxlength="45">
+    </div>
+    <div class="div1">
+        <label for="iescolaridade">Escolaridade</label>
+        <input type="text" id="iescolaridade" placeholder="Informe a escolaridade" size="25" maxlength="40">
+        <label for="iultimaescola">Última escola</label>
+        <input type="text" id="iultimaescola" placeholder="Informe a última escola" size="30" maxlength="40">
+    </div>
+    <div class="header2">
+        <h4>Endereço e contato</h4>
+    </div>
+    <div class="div1">
+        <label>CEP:<input name="cep" type="text" id="cep" value="" size="8" maxlength="8" onblur="pesquisacep(this.value);"></label>
+        <label>Rua:<input name="rua" type="text" id="rua" size="40" maxlength="40"></label>
+        <label>N°:<input type="number" name="numero" id="numero" size="6" maxlength="6"></label><br>
+        <label>Bairro:<input name="bairro" type="text" id="bairro" size="30" maxlength="30"></label>
+        <label>Cidade:<input name="cidade" type="text" id="cidade" size="30" maxlength="35"></label>
+        <label>Estado:<input name="uf" type="text" id="uf" size="2"></label><br/>
+    </div>
+    <div class="div1">
+        <label for="icasa">Mora em casa</label>
+        <input type="radio" name="casa" id="icasa">Própria
+        <input type="radio" name="casa" id="icasa">Cedida
+        <input type="radio" name="casa" id="icasa">Alugada<br>
+        <label for="ivalor">Valor do Aluguel: R$</label>
+        <input type="text" id="ivalor" size="20" maxlength="20">
+    </div>
+    <div class="div1">
+        <label for="itelefone">Telefone</label>
+        <input type="tel" name="" id="itelefone" size="14" maxlength="14" placeholder="(xx) xxxx-xxxx">
+        <label for="icelular">Celular</label>
+        <input type="tel" name="" id="icelular" size="14" maxlength="16" placeholder="(xx) xxxxx-xxxx">
+        <label for="iicelular">Cel. Recado</label>
+        <input type="tel" name="" id="iicelular" size="14" maxlength="16" placeholder="(xx) xxxxx-xxxx">
+    </div>
+    <div class="div1">
+        <label for="iemail">e-mail</label>
+        <input type="email" id="iemail" size="25"><br>
+        <label for="iredesocial">Rede social</label>
+        <input type="text" id="iredesocial" size="35"  maxlength="40">
+    </div>
+</form>
+
+
+{% endblock %}
